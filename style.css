@@ -1,3 +1,7 @@
 .text {
     display: inline;
 }
+
+th {
+    width:max-content;
+}

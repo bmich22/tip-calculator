@@ -1,12 +1,46 @@
+// function calculate() {
+//     let inputBox = document.getElementById("input-box");
+//     let inputValue = inputBox.value;
+//     alert("Input value: " + inputValue); 
+//     document.getElementById("restaurantBill").innerHTML = inputValue;
+//     document.getElementById("10Percent").innerHTML = inputValue * .10;
+//     document.getElementById("15Percent").innerHTML = inputValue * .15;
+//     document.getElementById("20Percent").innerHTML = inputValue * .20;
+//     document.getElementById("25Percent").innerHTML = inputValue * .25;
 
+// }
 
 function calculate() {
-    let inputBox = document.getElementById("input-box");
-    let inputValue = inputBox.value;
-    alert("Input value: " + inputValue); 
+    let inputValue = document.getElementById("input-box").value;
+    // let inputValue = inputBox.value;
+    let finalCheck = Number(inputValue);
+    alert("Input value: " + finalCheck);
     document.getElementById("restaurantBill").innerHTML = inputValue;
-    document.getElementById("10Percent").innerHTML = inputValue * .10;
-    document.getElementById("15Percent").innerHTML = inputValue * .15;
-    document.getElementById("20Percent").innerHTML = inputValue * .20;
+    let percentage = [.10, .15, .20, .25];
+    for (let i = 0; i < percentage.length; i++) {
+        if (percentage[i] === .10) {
+            let tenPerc = finalCheck * .10;
+            document.getElementById("tenTip").innerHTML = tenPerc;
+            document.getElementById("tenTotal").innerHTML = tenPerc + finalCheck;
+            document.getElementById("tenSplit").innerHTML = (tenPerc + finalCheck) / 2;
+        } else if (percentage[i] == .15) {
+            let fifteenPerc = finalCheck * .15;
+            document.getElementById("fifteenTip").innerHTML = fifteenPerc;
+            document.getElementById("fifteenTotal").innerHTML = fifteenPerc + finalCheck;
+            document.getElementById("fifteenSplit").innerHTML = (fifteenPerc + finalCheck) / 2;
+        } else if (percentage[i] == .20) {
+            let twentyPerc = finalCheck * .20;
+            document.getElementById("twentyTip").innerHTML = twentyPerc;
+            document.getElementById("twentyTotal").innerHTML = twentyPerc + finalCheck;
+            document.getElementById("twentySplit").innerHTML = (twentyPerc + finalCheck) / 2;
+        } else if (percentage[i] == .25) {
+            let twentyfivePerc = finalCheck * .25;
+            document.getElementById("tfiveTip").innerHTML = twentyfivePerc;
+            document.getElementById("tfiveTotal").innerHTML = twentyfivePerc + finalCheck;
+            document.getElementById("tfiveSplit").innerHTML = (twentyfivePerc + finalCheck) / 2;
+        }
+    }
+
+
 
 }
