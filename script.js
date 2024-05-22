@@ -1,18 +1,7 @@
-// function calculate() {
-//     let inputBox = document.getElementById("input-box");
-//     let inputValue = inputBox.value;
-//     alert("Input value: " + inputValue); 
-//     document.getElementById("restaurantBill").innerHTML = inputValue;
-//     document.getElementById("10Percent").innerHTML = inputValue * .10;
-//     document.getElementById("15Percent").innerHTML = inputValue * .15;
-//     document.getElementById("20Percent").innerHTML = inputValue * .20;
-//     document.getElementById("25Percent").innerHTML = inputValue * .25;
 
-// }
 
 function calculate() {
     let inputValue = document.getElementById("input-box").value;
-    // let inputValue = inputBox.value;
     let finalCheck = Number(inputValue);
     alert("Input value: " + finalCheck);
     document.getElementById("restaurantBill").innerHTML = inputValue;
