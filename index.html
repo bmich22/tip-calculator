@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Tip Calculator</title>
 </head>
 <body>
@@ -10,13 +11,14 @@
 
     <h3>Enter the amount of your bill:</h3>
 
-    <input id="input-box" type="text" placeholder="Enter Amount Here"/>
+    <input id="input-box" type="number" placeholder="Enter Amount Here" min="0" max="50000"/>
     <button id="submit-button" onclick="calculate()">Submit</button>
     <p id="restaurantBill">the input value should be displayed</p>
-    <p id="10Percent">10%:  </p>
-    <p id="15Percent">15%:  </p>
-    <p id="20Percent">20%:  </p>
+    <p class="text">10%:  </p><p id="10Percent" class="text">  </p><br>
+    <p class="text">15%:  </p><p id="15Percent" class="text">  </p><br>
+    <p class="text">20%:  </p><p id="20Percent" class="text">  </p><br>
     <button id="clear-button" onclick="clear()">CLEAR</button>
+
 
 
 <script src="script.js"></script>
